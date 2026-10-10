@@ -1,115 +1,274 @@
-<!doctype html>
-<html lang="pt-br">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A product of emergent.sh" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
-        <!--
-        manifest.json provides metadata used when your web app is installed on a
-        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-        -->
-        <!--
-        Notice the use of %PUBLIC_URL% in the tags above.
-        It will be replaced with the URL of the `public` folder during the build.
-        Only files inside the `public` folder can be referenced from the HTML.
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
 
-        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-        work correctly both with client-side routing and a non-root public URL.
-        Learn how to configure a non-root public URL by running `npm run build`.
-        -->
-        <title>Emergent | Fullstack App</title>
-        <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Conheça o Sal e Pimenta: comida saborosa, ambiente acolhedor e bons momentos à mesa. Confira nosso cardápio e encontre o restaurante."
+  >
+  <meta name="theme-color" content="#2d211b">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sal e Pimenta | Sabor que reúne">
+  <meta
+    property="og:description"
+    content="Comida saborosa e um ambiente acolhedor para compartilhar bons momentos."
+  >
+  <meta property="og:image" content="assets/img/restaurante.jpg">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-        <script>
-            !(function (t, e) {
-                var o, n, p, r;
-                e.__SV ||
-                    ((window.posthog = e),
-                    (e._i = []),
-                    (e.init = function (i, s, a) {
-                        function g(t, e) {
-                            var o = e.split(".");
-                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
-                                (t[e] = function () {
-                                    t.push(
-                                        [e].concat(
-                                            Array.prototype.slice.call(
-                                                arguments,
-                                                0,
-                                            ),
-                                        ),
-                                    );
-                                });
-                        }
-                        ((p = t.createElement("script")).type =
-                            "text/javascript"),
-                            (p.crossOrigin = "anonymous"),
-                            (p.async = !0),
-                            (p.src =
-                                s.api_host.replace(
-                                    ".i.posthog.com",
-                                    "-assets.i.posthog.com",
-                                ) + "/static/array.js"),
-                            (r =
-                                t.getElementsByTagName(
-                                    "script",
-                                )[0]).parentNode.insertBefore(p, r);
-                        var u = e;
-                        for (
-                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
-                                u.people = u.people || [],
-                                u.toString = function (t) {
-                                    var e = "posthog";
-                                    return (
-                                        "posthog" !== a && (e += "." + a),
-                                        t || (e += " (stub)"),
-                                        e
-                                    );
-                                },
-                                u.people.toString = function () {
-                                    return u.toString(1) + ".people (stub)";
-                                },
-                                o =
-                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
-                                        " ",
-                                    ),
-                                n = 0;
-                            n < o.length;
-                            n++
-                        )
-                            g(u, o[n]);
-                        e._i.push([i, s, a]);
-                    }),
-                    (e.__SV = 1));
-            })(document, window.posthog || []);
-            posthog.init("phc_DbsPb39SRc8z3EiQ6Dhj6ikv4H4rTKcht9d4sZSesceP", {
-                api_host: "https://ap.emergent.sh",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
-                session_recording: {
-                    recordCrossOriginIframes: true,
-                    capturePerformance: false,
-                },
-            });
-        </script>
-    </body>
+  <title>Sal e Pimenta | Restaurante — Sabor que reúne</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Atualize endereço, telefone e URL com os dados reais do restaurante. -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Sal e Pimenta",
+      "description": "Restaurante acolhedor com comida saborosa para compartilhar bons momentos.",
+      "servesCuisine": "Brasileira",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Rua e número]",
+        "addressLocality": "[Cidade]",
+        "addressRegion": "[UF]",
+        "addressCountry": "BR"
+      },
+      "telephone": "+55 [DDD e número]",
+      "url": "[URL do site]"
+    }
+  </script>
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#inicio" aria-label="Sal e Pimenta, página inicial">
+        <span class="brand-mark" aria-hidden="true">S<span>&</span>P</span>
+        <span class="brand-name">Sal <span>e</span> Pimenta</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Menu principal">
+        <a href="#sobre">Nossa casa</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#localizacao">Localização</a>
+        <a class="nav-cta" href="#localizacao">Venha nos visitar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-image" role="img" aria-label="Mesa posta em um restaurante aconchegante"></div>
+      <div class="hero-shade"></div>
+
+      <div class="container hero-content">
+        <p class="eyebrow">Comida feita para compartilhar</p>
+        <h1>O sabor de estar <em>junto.</em></h1>
+        <p class="hero-copy">
+          Receitas cheias de carinho, ingredientes selecionados e um lugar
+          acolhedor esperando por você.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#cardapio">Conheça o cardápio</a>
+          <a class="button button-outline" href="#localizacao">Como chegar</a>
+        </div>
+
+        <div class="hero-note">
+          <span class="hero-note-dot" aria-hidden="true"></span>
+          Uma boa mesa sempre tem lugar para mais um
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#sobre" aria-label="Role para conhecer o restaurante">
+        <span aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <section class="intro section" id="sobre">
+      <div class="container intro-grid">
+        <div class="intro-image-wrap">
+          <img
+            class="intro-image"
+            src="assets/img/restaurante.jpg"
+            alt="Interior acolhedor do restaurante Sal e Pimenta"
+            loading="lazy"
+          >
+          <div class="image-caption">
+            <span>Feito com carinho</span>
+            <span aria-hidden="true">✳</span>
+          </div>
+        </div>
+
+        <div class="intro-copy">
+          <p class="eyebrow eyebrow-dark">Prazer, somos o Sal e Pimenta</p>
+          <h2>Mais do que uma refeição, <em>um encontro.</em></h2>
+          <p>
+            Acreditamos que os melhores momentos acontecem ao redor da mesa.
+            Por isso, preparamos cada prato com cuidado e recebemos cada pessoa
+            como se estivesse em casa.
+          </p>
+          <p>
+            Venha conhecer nosso espaço, experimentar os sabores da casa e
+            aproveitar uma pausa gostosa no seu dia.
+          </p>
+          <a class="text-link" href="#localizacao">
+            Encontre seu lugar à mesa <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section section" id="cardapio">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow eyebrow-dark">Um gostinho da casa</p>
+            <h2>Feito para <em>dar água na boca.</em></h2>
+          </div>
+          <a class="text-link menu-heading-link" href="#localizacao">
+            Pergunte pelo cardápio completo <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <!-- Troque estes pratos e preços pelos itens reais do cardápio. -->
+        <div class="menu-grid">
+          <article class="menu-item">
+            <span class="menu-number">01</span>
+            <div>
+              <h3>Prato da casa</h3>
+              <p>Uma combinação especial preparada com ingredientes frescos.</p>
+            </div>
+            <span class="menu-price">R$ [valor]</span>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-number">02</span>
+            <div>
+              <h3>Favorito da família</h3>
+              <p>Receita generosa, cheia de sabor e perfeita para compartilhar.</p>
+            </div>
+            <span class="menu-price">R$ [valor]</span>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-number">03</span>
+            <div>
+              <h3>Doce da casa</h3>
+              <p>Uma sobremesa caprichada para deixar o encontro ainda melhor.</p>
+            </div>
+            <span class="menu-price">R$ [valor]</span>
+          </article>
+        </div>
+
+        <a class="button button-dark" href="#localizacao">Venha experimentar</a>
+      </div>
+    </section>
+
+    <section class="visit-section section" id="localizacao">
+      <div class="container visit-grid">
+        <div class="visit-copy">
+          <p class="eyebrow">Estamos esperando por você</p>
+          <h2>Seu próximo encontro começa <em>aqui.</em></h2>
+          <p>
+            Salve o endereço, confira nossos horários e venha aproveitar.
+            Será um prazer receber você.
+          </p>
+
+          <div class="visit-details">
+            <div class="detail-row">
+              <span class="detail-icon" aria-hidden="true">⌖</span>
+              <div>
+                <h3>Endereço</h3>
+                <p>[Rua, número, bairro]<br>[Cidade] — [UF]</p>
+              </div>
+            </div>
+
+            <div class="detail-row">
+              <span class="detail-icon" aria-hidden="true">◷</span>
+              <div>
+                <h3>Horário de funcionamento</h3>
+                <p>[Dias da semana]: [horário]<br>[Dias fechados ou observações]</p>
+              </div>
+            </div>
+
+            <div class="detail-row">
+              <span class="detail-icon" aria-hidden="true">☎</span>
+              <div>
+                <h3>Reservas e informações</h3>
+                <p><a href="tel:+55DDDNUMERO">[Telefone ou WhatsApp]</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Troque o link de exemplo pelo WhatsApp real do restaurante. -->
+          <a
+            class="button button-primary"
+            href="https://wa.me/55DDDNUMERO"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Fale pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="map-wrap">
+          <!-- Atualize a busca para o endereço real do restaurante. -->
+          <iframe
+            title="Mapa para encontrar o restaurante Sal e Pimenta"
+            src="https://maps.google.com/maps?q=Sal%20e%20Pimenta%20[Cidade]%20[UF]&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/search/?api=1&query=Sal+e+Pimenta+[Cidade]+[UF]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir no Google Maps <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true">S<span>&</span>P</span>
+        <span class="brand-name">Sal <span>e</span> Pimenta</span>
+      </a>
+      <p>Comida gostosa. Gente querida. Momentos para lembrar.</p>
+      <span class="footer-copy">© <span id="current-year">2026</span> Sal e Pimenta</span>
+    </div>
+  </footer>
+</body>
 </html>
-
-
